@@ -95,6 +95,30 @@ $ ls
 'The-Power-of-HABIT.pdf648807418 - Shortcut.lnk'*   test/
 "Van 20' Design"/
 (py3Env)
+
+
+
 Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
-$ requirements.txt
-bash: requirements.txt: command not found
+$ pip search Flask
+Exception:
+Traceback (most recent call last):
+  File "c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages\pip\basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages\pip\commands\search.py", line 45, in run
+    pypi_hits = self.search(query, options)
+  File "c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages\pip\commands\search.py", line 62, in search
+    hits = pypi.search({'name': query, 'summary': query}, 'or')
+  File "C:\Users\Tim\AppData\Local\Programs\Python\Python36\lib\xmlrpc\client.py", line 1112, in __call__
+    return self.__send(self.__name, args)
+  File "C:\Users\Tim\AppData\Local\Programs\Python\Python36\lib\xmlrpc\client.py", line 1452, in __request
+    verbose=self.__verbose
+  File "c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages\pip\download.py", line 778, in request
+    return self.parse_response(response.raw)
+  File "C:\Users\Tim\AppData\Local\Programs\Python\Python36\lib\xmlrpc\client.py", line 1342, in parse_response
+    return u.close()
+  File "C:\Users\Tim\AppData\Local\Programs\Python\Python36\lib\xmlrpc\client.py", line 656, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -32500: "RuntimeError: PyPI's XMLRPC API has been temporarily disabled due to unmanageable load and will be deprecated in the near future. See https://status.python.org/ for more information.">
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env)
