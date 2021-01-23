@@ -1,0 +1,100 @@
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ cd documents/github/python_stack/my_environments/py3Env
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments/py3Env (main)
+$ pwd
+/c/Users/Tim/documents/github/python_stack/my_environments/py3Env
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments/py3Env (main)
+$ cd ..
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ pwd
+/c/Users/Tim/documents/github/python_stack/my_environments
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ source py3Env/scripts/activate
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ pip install Django==1.11.9
+Collecting Django==1.11.9
+  Downloading https://files.pythonhosted.org/packages/c8/a6/291039f0ce4b9818e0399359866337e6dfe9c0e23d8d94f00e657edbfcd8/Django-1.11.9-py2.py3-none-any.whl (6.9MB)
+Collecting pytz (from Django==1.11.9)
+  Downloading https://files.pythonhosted.org/packages/89/06/2c2d3034b4d6bf22f2a4ae546d16925898658a33b4400cfb7e2c1e2871a3/pytz-2020.5-py2.py3-none-any.whl (510kB)
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.9 pytz-2020.5
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+Django (1.11.9)
+pip (9.0.1)
+pytz (2020.5)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ deactivate
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ pip3 list
+Package    Version
+---------- -------
+pip        20.3.3
+setuptools 28.8.0
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack/my_environments (main)
+$ cd ..
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack (main)
+$ source my_environments/py3Env/scripts/activate
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack (main)
+$ pip install Django==1.11.9
+Requirement already satisfied: Django==1.11.9 in c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages
+Requirement already satisfied: pytz in c:\users\tim\documents\github\python_stack\my_environments\py3env\lib\site-packages (from Django==1.11.9)
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack (main)
+$ pip freeze
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+Django==1.11.9
+pytz==2020.5
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github/python_stack (main)
+$ cd ..
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github
+$ cd ..
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents
+$ cd ..
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ cd desktop/
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ pip freeze > requirements.txt
+You are using pip version 9.0.1, however version 20.3.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ ls
+'Age of Empires II Definitive Edition.url'          Zoom.lnk*
+'Bullet Journal Keys.webp'                          atomCheetSheet.lnk*
+'Cross of Iron (Game Menu).lnk'*                    desktop.ini
+ Destination/                                       g7/
+ Discord.lnk*                                       portfolio_assignment.png
+'Stuff to sell'/                                    requirements.txt
+'The-Power-of-HABIT.pdf648807418 - Shortcut.lnk'*   test/
+"Van 20' Design"/
+(py3Env)
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ requirements.txt
+bash: requirements.txt: command not found
