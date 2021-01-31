@@ -57,7 +57,7 @@ def length_and_value(x,y):
     list = []
     for x in range((x)):
         list.append(y)
-    print(list)
+    return list
 
 
-length_and_value(4, 7)
+print(length_and_value(4, 7))
