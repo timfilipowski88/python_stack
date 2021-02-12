@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="/results" method='POST'>
+        {% csrf_token %}
+        <h1>Dojo Survey</h1>
+        Your Name: <input type="text" name="name">
+        Dojo location: <select name="location">
+            <option value="Northern Hemisphere">Northern Hemisphere</option>
+            <option value="Southern Hemisphere">Southern Hemisphere</option>
+        </select>
+        Favorite Language <select name="language">
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+        Comment (optional): <textarea name="comment" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="View User">
+    </form>
+</body>
+</html>
