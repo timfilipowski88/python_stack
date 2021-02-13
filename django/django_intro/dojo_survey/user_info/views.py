@@ -1,21 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
 def index(request):
-    context = {
-        "name": 'tim',
-    }
     print("Request works")
-    return render(request, 'index.html', context)
+    return render(request, 'index.html')
 
 def results(request):
     if request.method == 'POST':
-        context = {
-            'name': request.POST['name'],
-            'lang': request.POST['language'],
-            'loc': request.POST['location'],
-            'comm': request.POST['comment']
-        }
-        return render(request, 'results.html', context)
+        request.session['name'] = request.POST['name']
+        request.session['lang'] = request.POST['language']
+        request.session['loc'] = request.POST['location']
+        request.session['comm'] = request.POST['comment']
+        return redirect('/results')
     return render(request, 'results.html')

@@ -7,9 +7,13 @@
 </head>
 <body>
     <h1>The New DOJO!</h1>
-    <p>Their name is: {{name}}.</p>
-    <p>Their favorite coding language is {{lang}}.</p>
-    <p>Their from the {{loc}}.</p>
-    <p>Their comment is : {{comm}}</p>
+    <p>Their name is: {{request.session.name}}.</p>
+    <p>Their favorite coding language is {{request.session.lang}}.</p>
+    <p>Their from the {{request.session.loc}}.</p>
+    <p>Their comment is : {{request.session.comm}}</p>
+    <form action="/index">
+        {% csrf_token %}
+        <input type="submit" value="Go Back">
+    </form>
 </body>
 </html>
