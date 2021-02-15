@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+span {
+    display: inline-block;
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 80px;
+}
+
+form {
+    width: 180px;
+    margin: 15px 15px;
+    padding: 10px;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 4px;
+    text-align: center;
+}
+
+form>p {
+    margin: 15px 0;
+}
+
+p {
+    margin: 8px 0;
+}
+button {
+    padding: 4px 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+#activity {
+    border: 4px solid black;
+    border-radius: 4px;
+    height: 120px;
+    overflow: auto;
+}
+
+p.green {
+    color: green;
+}
+
+p.red {
+    color: red;
+}
