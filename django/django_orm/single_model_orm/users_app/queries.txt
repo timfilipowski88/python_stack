@@ -1,0 +1,36 @@
+Create a model called User following the ERD above  
+
+Create and run the migration files to create the User table in your database  
+
+Create a .txt file where you'll save each of the queries you'll run in the shell  Run the shell and import your User model  
+
+Query: Create 3 new users  
+User.objects.create(first_name="Tim", last_name="Filipowski", email_address="tim@mail.com", age=32)
+User.objects.create(first_name="Matt", last_name="Filipowski", email_address="matt@mail.com", age=38)
+User.objects.create(first_name="Cara", last_name="Filipowski", email_address="cara@mail.com", age=45)
+
+Query: Retrieve all the users  
+User.objects.all()
+
+Query: Retrieve the last user 
+User.objects.last()
+
+Query: Retrieve the first user  
+User.objects.first()
+
+Query: Change the user with id=3 so their last name is Pancakes. 
+update_last = User.objects.get(id=3)
+update_last.last_name="Pancakes"
+update_last.save()
+
+Query: Delete the user with id=2 from the database  
+delete_user = User.objects.get(id=2)
+delete_user.delete()
+
+Query: Get all the users, sorted by their first name
+User.objects.all().order_by("first_name")
+
+BONUS Query: Get all the users, sorted by their first name in descending order
+User.object.all().order_by("-first_name")
+
+Submit your .txt file that contains all the queries you ran in the shell

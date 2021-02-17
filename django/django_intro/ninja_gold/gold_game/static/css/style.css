@@ -10,6 +10,9 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    margin: 10px;
+}
 span {
     display: inline-block;
     padding: 2px;
