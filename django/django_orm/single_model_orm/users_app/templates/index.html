@@ -26,5 +26,27 @@
             </tr>
         {% endfor %}
     </table>
+
+    <h1>Add a User</h1>
+    <form action="process" method="post">
+        {% csrf_token %}
+        <div class="user_input">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" class="text_input">
+        </div>
+        <div class="user_input">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" class="text_input">
+        </div>
+        <div class="user_input">
+            <label for="email_address">Email</label>
+            <input type="text" name="email_address" id="email_address" class="text_input">
+        </div>
+        <div class="user_input">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" class="text_input">
+        </div>
+        <button class="user_add">Add</button>
+    </form>
 </body>
 </html>
