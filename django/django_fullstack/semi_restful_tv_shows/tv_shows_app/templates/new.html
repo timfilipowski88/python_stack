@@ -11,6 +11,13 @@
 <body>
     <h1>Add a New Show</h1>
     <a href="/shows" class="back_btn">Go Back</a>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="{{ message.tag }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <form action="create" method="post">
         {% csrf_token %}
         <div class="form-group">

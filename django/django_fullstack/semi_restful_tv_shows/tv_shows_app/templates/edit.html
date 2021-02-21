@@ -11,7 +11,14 @@
 <body>
     <h1>Edit Show {{ show.id }}</h1>
     <a href="/shows" class="back_btn">Go Back</a>
-    <form action="submit" method="post">
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="{{ message.tag }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/{{ show.id }}/update" method="post">
         {% csrf_token %}
         <div class="form-group">
             <label for="title">Title</label>

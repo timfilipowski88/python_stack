@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses App</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <h2>Add a new course</h2>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/courses/add_course" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name='name' id="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" name='description' id="description" class="form-control">
+        </div>
+        <button>Add</button>
+    </form>
+    <div class="courses">
+        <h2>Courses</h2>
+        <table>
+            <thead>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </thead>
+            <tr>
+            {% for course in courses %}
+                <td>{{ course.name }}</td>
+                <td>{{ course.description.content }}</td>
+                <td>{{ course.created_at }}</td>
+                <td><a href="courses/destroy/{{course.id}}">remove</a> | <a href="/courses/comment/{{course.id}}">comment</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

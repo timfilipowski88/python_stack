@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.name }}</title>
+</head>
+<body>
+    <h1>{{ course.name }}</h1>
+    <p>Description: {{ course.description.content }}</p>
+    <p>Created at:  {{ course.created_at }}</p>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/courses/add_comment/{{course.id}}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="new-comment">Add a new comment</label>
+            <textarea name="comment" id="new-comment" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <button>Submit Comment</button>
+    </form>
+    {% for comment in course.comments.all %}
+        <div class="comment-box">
+            <p>{{ comment.comment }}</p>
+            <p>Comment Created : {{ comment.created_at }}</p>
+            <p>Comment Updated:  {{ comment.updated_at }}</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

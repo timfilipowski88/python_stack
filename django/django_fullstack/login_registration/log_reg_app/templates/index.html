@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Login and Registration</title>
+</head>
+<body>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Registration</h1>
+                <form action="/register" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first_name" id='first-name' class='form-control'>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last_name" id='last-name' class='form-control'>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email_address" id='email' class='form-control'>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id='password' class='form-control'>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" name="confirm_password" id='confirm_password' class='form-control'>
+                    </div>
+                    <button type='submit'>Register</button>
+                </form>
+            </div>
+            <div class="col">
+                <h1>Login</h1>
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <div class="form">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email_address" id='email' class='form-control'>
+                    </div>
+                    <div class="form">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id='password' class='form-control'>
+                    </div>
+                    <button type='submit'>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- load Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Amadon</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Thank you for your business!</h3>
+        <div class="row">
+            <div class="col">
+                <p>We charged your credit card for {{ last_order.total_price }}</p>
+            </div>
+            <div class="col">
+                <p>You have ordered # {{ total_products }} items so far and spent $$ {{ total_spent }} with Amadon.com!</p>
+            </div>
+        </div>
+        <p><a href="/">Go Back</a></p>
+    </div>
+</body>
+</html>
